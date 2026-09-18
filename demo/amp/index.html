@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html ⚡>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="canonical" href="self.html" />
+    <meta name="viewport" content="width=device-width,minimum-scale=1" />
+    <style amp-boilerplate>
+      body {
+        -webkit-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+        -moz-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+        -ms-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+        animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+      }
+      @-webkit-keyframes -amp-start {
+        from {
+          visibility: hidden;
+        }
+        to {
+          visibility: visible;
+        }
+      }
+      @-moz-keyframes -amp-start {
+        from {
+          visibility: hidden;
+        }
+        to {
+          visibility: visible;
+        }
+      }
+      @-ms-keyframes -amp-start {
+        from {
+          visibility: hidden;
+        }
+        to {
+          visibility: visible;
+        }
+      }
+      @-o-keyframes -amp-start {
+        from {
+          visibility: hidden;
+        }
+        to {
+          visibility: visible;
+        }
+      }
+      @keyframes -amp-start {
+        from {
+          visibility: hidden;
+        }
+        to {
+          visibility: visible;
+        }
+      }
+    </style>
+    <noscript
+      ><style amp-boilerplate>
+        body {
+          -webkit-animation: none;
+          -moz-animation: none;
+          -ms-animation: none;
+          animation: none;
+        }
+      </style></noscript
+    >
+
+    <style amp-custom>
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: Helvetica, Arial, sans-serif;
+        background: #edf0f0;
+      }
+
+      #description {
+        z-index: 2;
+        width: 100%;
+        white-space: pre-line;
+      }
+
+      #controls {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        z-index: 1;
+        opacity: 0;
+      }
+
+      .wasmboy-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        width: 100%;
+
+        margin-bottom: 10px;
+      }
+
+      #wasmboy-amp-script {
+        border: 1px solid black;
+
+        display: flex;
+        position: relative;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+
+      #fps {
+        text-align: center;
+        margin-top: 10px;
+        margin-bottom: 10px;
+      }
+
+      #wasmboy-svg-output {
+        display: block;
+
+        width: 100%;
+
+        text-align: center;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    </style>
+
+    <meta
+      name="amp-experiment-token"
+      content="AAAAAE17Im9yaWdpbiI6Indhc21ib3kuYXBwIiwiZXhwZXJpbWVudCI6ImFtcC1zY3JpcHQiLCJleHBpcmF0aW9uIjoxNTY3Mjk2MDAwMDAwfRm6SfqUYOq9O+xFSn3PeGxzD+OfKcnsE+5SrzQup1EWOeZQGVCHiXfS6etDrR6hI+bCmXEJB18LSBmj89piv9MqOFew2WzhEKaLQ+T2qE4TwYgMwCuxiWjoyfI+dOs00X//B4yf7h/x6YfKryELVpKj0i0UF1Z0jqTSzunnky9IGJCCWgvvkJeTOs8W4rBzp2Bj+4/FiSAlGT6u8u5NycgWyPsgfEeRVS2zD/miYFkEriKNN8HqrGRLQ0cKuqIVULLsbmBld9MjRdPbZkgbE7fTUkmDeOdD2fQkpYw2Mm9kLOprQ0/0Li3BBCRhcbLxJcNInS9HZroOMzYcsBxAtWw="
+    />
+
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <script async src="https://torch2424-amp-glitch-express.glitch.me/amp-script.js"></script>
+  </head>
+
+  <body>
+    <h1>⚡wAsMP Boy⚡</h1>
+    <p id="description">
+      <a href="https://github.com/torch2424/wasmBoy" target="_blank">WasmBoy</a> TS Core Running within
+      <a href="https://github.com/ampproject/amphtml/tree/master/extensions/amp-script" target="_blank">amp-script</a> and
+      <a href="https://github.com/ampproject/worker-dom" target="_blank">Worker DOM</a>. Runs slow due to experimenal amp-script / Worker
+      DOM limitations. Which is worked around using a Pixel-by-pixel RGBA ImageData Array to SVG solution.
+
+      <b>NOTE:</b>
+      Play on desktop. You must click the game to control it.
+
+      <b>AMP Script is automatically enabled by the Origin Trial.</b>
+      If it isn't working, run `AMP.toggleExperiment('amp-script')` in Dev tools console.
+
+      <b>Lifted the <a href="https://github.com/ampproject/amphtml/pull/20427" target="_blank">AMP Script Size restriction</a></b>
+
+      <b>ROM played is: <a href="http://tangramgames.dk/tobutobugirl/" target="_blank">Tobu Tobu Girl</a></b>
+
+      <b>Controls:</b>
+      Up,Down,Left,Right = Arrow Keys, WASD A = Z B = X Start = Enter Select = Shift Play/Pause = Space
+    </p>
+
+    <div class="wasmboy-container">
+      <!-- need to serve cors because of new amp-script requirement -->
+      <amp-script layout="fixed" width="322px" height="290px" id="wasmboy-amp-script" src="<%BUNDLE%>"> </amp-script>
+    </div>
+  </body>
+</html>

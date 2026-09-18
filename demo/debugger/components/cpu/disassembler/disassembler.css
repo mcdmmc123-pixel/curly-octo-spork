@@ -1,0 +1,55 @@
+.disassembler {
+}
+
+.disassembler__container {
+  min-width: 475px;
+  width: 475px;
+  max-width: 475px;
+}
+
+/* Variables for our psuedo table */
+:root {
+  --disassembler-width: 450px;
+  --disassembler-actions-width: 75px;
+  --disassembler-hex-width: 75px;
+  --disassembler-mnemonic-width: 75px;
+}
+
+.disassembler__header-list {
+  width: var(--disassembler-width);
+}
+
+.disassembler__list {
+  width: var(--disassembler-width);
+}
+
+.disassembler__header-list__actions,
+.disassembler__list__virtual__row__actions {
+  min-width: var(--disassembler-actions-width);
+  width: var(--disassembler-actions-width);
+  max-width: var(--disassembler-actions-width);
+}
+
+.disassembler__header-list__mnemonic,
+.disassembler__list__virtual__row__mnemonic {
+  min-width: var(--disassembler-mnemonic-width);
+  width: var(--disassembler-mnemonic-width);
+  max-width: var(--disassembler-mnemonic-width);
+}
+
+.disassembler__header-list__address,
+.disassembler__list__virtual__row__address,
+.disassembler__header-list__value,
+.disassembler__list__virtual__row__value,
+.disassembler__header-list__param,
+.disassembler__list__virtual__row__param,
+.disassembler__header-list__cycles,
+.disassembler__list__virtual__row__cycles {
+  min-width: var(--virtual-list-widget-hex-width);
+  width: var(--virtual-list-widget-hex-width);
+  max-width: var(--virtual-list-widget-hex-width);
+}
+
+.disassembler__list__virtual__row__actions > button {
+  width: 20px;
+}

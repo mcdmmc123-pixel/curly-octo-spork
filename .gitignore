@@ -1,0 +1,35 @@
+# Ignore system files
+**/.DS_Store
+
+# Ignore WAPM Files
+**/wapm_packages
+
+# Ignore game files
+games/*
+*.gb
+!test/**/*.gb
+!demo/wasmerboy/tobutobugirl/*.gb
+*.gbc
+!test/**/*.gbc
+*.sav
+*.rtc
+*.sym
+*.sn1
+
+# Ignore test files
+test/accuracy/testroms/**/*.output
+test/accuracy/testroms/**/*.png
+!test/accuracy/testroms/**/*.golden.output
+!test/accuracy/testroms/**/*.golden.png
+test/performance/testroms/**/*.png
+!test/performance/testroms/**/*.*.noPerformanceOptions.png
+
+# Ignore build output
+dist/
+assets/*.map
+build/
+
+# Ignore node files
+node_modules
+/build
+/*.log
